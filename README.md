@@ -61,7 +61,7 @@ Before HobbyHive, there was no centralized platform for after-school activities,
    git clone https://github.com/yazminrobertt/HobbyHive.git
    ```
 2. Start **Apache** and **MySQL** from the XAMPP Control Panel.
-3. Open phpMyAdmin (`http://localhost/phpmyadmin`) and import the project's database (see project files for the `.sql` file, if included).
+3. Open phpMyAdmin (`http://localhost/phpmyadmin`) and import the project's database (see project files for the `.sql` file).
 4. Update database connection details in the project's config file if needed (default XAMPP setup uses `root` with no password).
 5. Visit the project in your browser:
    ```
