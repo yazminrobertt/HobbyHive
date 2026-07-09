@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="icon" href="iconhobby.png" type="image/png">
+    <title>Sign Up Parents</title>
+
+    <style>
+        .navbar-default {
+            background-color: #A1C3F6;
+            border-color: #A1C3F6; 
+        }
+        .navbar-default .navbar-nav > li > a {
+            color: #003366;
+        }
+        .navbar-default .navbar-brand {
+            color: #003366;
+            padding: 0;  
+            display: flex;
+            align-items: center;  
+            height: 50px; 
+        }
+        .navbar-default .navbar-brand img {
+            margin: 30px 20px;
+            max-height: 100%;  
+            max-width: 100%;  
+        }
+        .navbar-default .navbar-nav > li > a:hover {
+            background-color: rgb(74, 148, 223); 
+            color: #003366; 
+        }
+        .navbar-default .navbar-nav > li.active > a {
+            text-decoration: underline;
+            background-color: rgb(74, 148, 223); 
+            color: #003366; 
+        }
+        .navbar-default .navbar-nav > .dropdown.active > a {
+            background-color: rgb(74, 148, 223); 
+            color: #003366; 
+            border-bottom: 2px solid #FFD700;
+        }
+        .navbar-default .navbar-nav > .dropdown.active > .dropdown-menu {
+            background-color: rgb(74, 148, 223);
+        }
+        .dropdown-menu {
+            background-color: #A1C3F6;
+        }
+        .navbar-default .navbar-nav > .dropdown.active > a,
+        .navbar-default .navbar-nav > .dropdown:hover > a {
+            background-color: rgb(74, 148, 223);
+            color: #003366; 
+        }
+        .navbar-default .navbar-nav > .dropdown-menu {
+            background-color: #A1C3F6; 
+            border: none; 
+        }
+        .navbar-default .navbar-nav > .dropdown-menu > li > a:hover {
+            background-color: rgb(74, 148, 223); 
+            color: #003366; 
+        }
+        .navbar-default .navbar-nav > .dropdown-menu > li.active > a {
+            background-color: rgb(74, 148, 223); 
+            color: #003366; 
+        }
+        .navbar-default .navbar-nav > .dropdown-menu > li.active > a {
+            text-decoration: underline; 
+        }
+    </style>
+
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            padding-top: 120px; /* Adjust based on the height of your navbar */
+        }
+        /* Main content area */
+        main {
+            flex: 1; 
+        }
+        .classfooter {
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            margin-top: auto;
+        }
+        .classfooter .footer-main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-top: 1px solid #ddd;
+        }
+        .classfooter .footerLeft {
+            display: flex;
+            gap: 15px;
+        }
+        .classfooter .footerBtn {
+            background: none;
+            border: none;
+            font-size: 12px;
+            color: #333;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        .classfooter .footerBtn:hover {
+            color: #bbb;
+        }
+        .classfooter .footerRight {
+            display: flex;
+            gap: 10px;
+        }
+        .classfooter .socialIcon img {
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+        }
+        .roundedBox {
+            border-radius: 15px;
+            padding: 20px;
+            max-width: 700px;
+            margin: auto;
+            background-color: #ffffff; 
+            box-shadow: 0 4px 8px rgba(72, 161, 255, 0.3); 
+            color: #004085;
+            border: 1px solid #ddd; 
+        }
+        .roundedBox .form-group {
+            display: flex;
+            justify-content: flex-start; 
+            align-items: center; 
+            margin-bottom: 15px;
+        }
+        .roundedBox .form-group label {
+            font-size: 14px; 
+            font-weight: bold;
+            color: #004085;
+            width: 150px; 
+            text-align: left;
+        }
+        .roundedBox .form-control {
+            font-size: 14px; 
+            font-weight: normal;
+            padding: 10px;
+            background-color: #f9f9f9; 
+            border: 1px solid #ddd; 
+            border-radius: 5px;
+            color: #004085;
+            width: calc(100% - 170px);
+            margin-left: 15px;
+            text-align: left;
+        }
+        .roundedBox .form-control:focus {
+            border-color: #004ba0;
+            box-shadow: 0 0 5px rgba(0, 75, 160, 0.3); 
+            outline: none;
+        }
+        .roundedBox .form-control:read-only {
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            color: #777;
+            cursor: not-allowed;
+        }
+        .roundedBox .form-control:read-only:focus {
+            border-color: #ddd;
+            box-shadow: none;
+            outline: none;
+        }
+        .submit {
+            margin-left: 560px;
+            background-color: rgb(55, 135, 227); 
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 14px; 
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease; 
+        }
+        .submit:hover {
+            background-color: #004ba0; 
+        }
+        .roundedBox .form-group.text-center {
+            text-align: center;
+        }
+    </style>
+
+    <head>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="index.php">
+                        <img src="logo.png" alt="Logo" style="max-height: 70px; margin-bottom:20px;">
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="">About Us</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown">Activities
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="">Sports</a></li>
+                                <li><a href="">Performing Arts</a></li> 
+                            </ul>
+                        </li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </head>
+
+    <body>
+        <div class="main">
+            <div class="roundedBox">
+                <form id="parentSign" method="POST" action="signParent.php">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone" name=phone required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="parentPwd">Password</label>
+                        <input type="password" class="form-control" id="pwd" name="pwd" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="passconform">Password Confirmation</label>
+                        <input type="password" class="form-control" id="parentPwd" name="parentPwd" required>
+                    </div>
+                    <button type="submit" class="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="classfooter">
+            <footer class="footer-main">
+                <div class="footerLeft">
+                    <button class="footerBtn">For Coaches</button>
+                    <button class="footerBtn" onclick="window.location.href='faq.php';">Support FAQ</button>
+                </div>
+                <div class="footerRight">
+                    <div class="socialIcon">
+                        <img src="Facebook.jpg" alt="Facebook">
+                    </div>
+                    <div class="socialIcon">
+                        <img src="Instagram.jpg" alt="Instagram">
+                    </div>
+                    <div class="socialIcon">
+                        <img src="Twitter.jpg" alt="Twitter">
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+
+
+
+</html>
